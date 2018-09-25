@@ -29,20 +29,22 @@ export interface EventAction {
     }): any;
 }
 export interface CalendarEvent<MetaType = any> {
-    id?: string | number;
-    start: Date;
-    end?: Date;
-    title: string;
-    color?: EventColor;
-    actions?: EventAction[];
-    allDay?: boolean;
-    cssClass?: string;
-    resizable?: {
-        beforeStart?: boolean;
-        afterEnd?: boolean;
-    };
-    draggable?: boolean;
-    meta?: MetaType;
+   id?: string | number;
+   start: Date;
+   end?: Date;
+   title: string;
+   color?: EventColor;
+   actions?: EventAction[];
+   allDay?: boolean;
+   message?: string;
+   event_type?: boolean;
+   cssClass?: string;
+   resizable?: {
+       beforeStart?: boolean;
+       afterEnd?: boolean;
+   };
+   draggable?: boolean;
+   meta?: MetaType;
 }
 export interface WeekViewEvent {
     event: CalendarEvent;
